@@ -1,6 +1,6 @@
 <template>
     <div class="cartes">
-        <h2>{{ contact.name }}</h2>
+        <h3>{{ contact.name }}</h3>
         <span>{{ contact.num }}</span>
         <button @click="call(contact.num,contact.name)"><ion-icon name="call-outline"></ion-icon></button>
     </div>
@@ -38,14 +38,13 @@ export default {
     }
     .cartes {
         display: flex;
-        background-color: rgb(50, 50, 50);
         color: white;
         width: fit-content;
         min-width: 250px;
         justify-content: space-between;
         align-items: center;
         margin: auto;
-        margin-bottom: 20px;
-        padding: 20px;
+        border: white solid 1px;
+        padding: 5px;
     }
 </style>
