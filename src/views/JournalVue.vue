@@ -14,3 +14,10 @@ export default {
     },
 }
 </script>
+<style scoped>
+  .cartes{
+    display:flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+</style>

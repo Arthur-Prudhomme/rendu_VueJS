@@ -1,9 +1,11 @@
 <template>
   <div class="contact">
-    <router-link to="/form"><button>+</button></router-link>
-    <div v-for="contact in contacts" :key="contact.num">
-      <CarteContact :contact="contact" />
+    <div id="contact">
+      <div v-for="contact in contacts" :key="contact.num">
+        <CarteContact :contact="contact" />
+      </div>
     </div>
+    <router-link to="/form"><button>+</button></router-link>
   </div>
 </template>
 <script>
@@ -20,3 +22,13 @@ export default {
     },
 }
 </script>
+<style scoped>
+  .contact{
+    display:flex;
+  }
+  #contact{
+    display:flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+</style>

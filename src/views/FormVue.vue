@@ -1,12 +1,13 @@
 <template>
-  
-    <form @submit.prevent="ajoutContact">
-        <span v-if="errorC">numéro déjà enregistré</span>
-        <input type="text" placeholder="name" v-model="formContact.name">
-        <span v-if="formContact.num.length < 10 && error">num inférieure à 10</span>
-        <input type="text" placeholder="num" maxlength="10" v-model="formContact.num">
-        <button type="submit">Ajouter</button>
-    </form>
+    <div class="container">
+        <form @submit.prevent="ajoutContact" class="form">
+            <span v-if="errorC">numéro déjà enregistré</span>
+            <input type="text" placeholder="name" v-model="formContact.name">
+            <span v-if="formContact.num.length < 10 && error">num inférieure à 10</span>
+            <input type="text" placeholder="num" maxlength="10" v-model="formContact.num">
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
 </template>
 <script>
 export default {
@@ -51,3 +52,9 @@ export default {
     }
 }
 </script>
+<style scoped>
+  .form{
+    display:flex;
+    flex-direction: column;
+  }
+</style>
